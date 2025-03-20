@@ -1,12 +1,29 @@
 import re
 from collections import Counter
+import os
+import zipfile
 import spacy
 import json
 
 class SkillsExtractor:
     def __init__(self, skills_data_path):
         self.skills_data = self.load_skills_data(skills_data_path)
-        self.nlp = spacy.load("en_core_web_sm")
+        self.nlp = self.load_spacy_model()
+    
+     @staticmethod
+    def load_spacy_model():
+        model_path = "models/en_core_web_sm"
+        zip_path = "models/en_core_web_sm.zip"
+        
+        # Check if the model directory exists
+        if not os.path.exists(model_path):
+            print("Unzipping spaCy model...")
+            # Unzip the model
+            with zipfile.ZipFile(zip_path, 'r') as zip_ref:
+                zip_ref.extractall("models/")
+        
+        # Load the spaCy model
+        return spacy.load(model_path)
 
     @staticmethod
     def load_skills_data(path):

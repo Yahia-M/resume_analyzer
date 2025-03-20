@@ -25,7 +25,11 @@ jobs:
         run: |
           pip install --upgrade pip
           pip install -r requirements.txt 
-          python -m spacy download en_core_web_sm
+
+      - name: Unzip and install spaCy model
+        run: |
+          mkdir -p models/en_core_web_sm
+          unzip models/en_core_web_sm.zip -d models/
 
       - name: Run tests
         run: |
@@ -42,6 +46,6 @@ jobs:
 
       - name: Deploy 
         run: |
-          echo "Deploying the app with ngrok..."
-          streamlit run app.py &
+          echo "Deploying the app streamlit..."
+          streamlit run streamlit_app.py 
           
