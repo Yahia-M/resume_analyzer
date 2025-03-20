@@ -19,13 +19,13 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.12'
+          python-version: '3.12.9'
 
       - name: Install dependencies
         run: |
           pip install --upgrade pip
-          pip install -r requirements.txt --quiet
-          python -m spacy download en_core_web_sm --quiet
+          pip install -r requirements.txt 
+          python -m spacy download en_core_web_sm
 
       - name: Run tests
         run: |
