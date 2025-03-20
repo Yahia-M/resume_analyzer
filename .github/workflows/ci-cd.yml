@@ -1,0 +1,49 @@
+name: CI/CD Pipeline for Resume Analyzer
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt --quiet
+          python -m spacy download en_core_web_sm --quiet
+
+      - name: Run tests
+        run: |
+          echo "Running tests..."
+          # Add test commands here (e.g., pytest, unittest)
+
+  deploy:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Deploy with ngrok
+        run: |
+          echo "Deploying the app with ngrok..."
+          pip install pyngrok --quiet
+          ngrok authtoken ${{ secrets.NGROK_AUTHTOKEN }}
+          streamlit run app.py &
+          ngrok http 8504
