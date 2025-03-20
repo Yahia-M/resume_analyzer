@@ -10,7 +10,7 @@ class SkillsExtractor:
         self.skills_data = self.load_skills_data(skills_data_path)
         self.nlp = self.load_spacy_model()
     
-     @staticmethod
+    @staticmethod
     def load_spacy_model():
         model_path = "models/en_core_web_sm"
         zip_path = "models/en_core_web_sm.zip"
