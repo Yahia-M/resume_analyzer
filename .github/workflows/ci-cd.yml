@@ -44,6 +44,6 @@ jobs:
         run: |
           echo "Deploying the app with ngrok..."
           pip install pyngrok --quiet
-          ngrok authtoken ${{ secrets.NGROK_AUTHTOKEN }}
+          ngrok authtoken 1nl3Mn1X5UJPxiTVpqqtNr0whc2_7fe21pBzrZ7kkeyBCLGko
           streamlit run app.py &
           ngrok http 8504
