@@ -19,7 +19,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.9'
+          python-version: '3.11'
 
       - name: Install dependencies
         run: |
@@ -45,5 +45,5 @@ jobs:
           echo "Deploying the app with ngrok..."
           pip install pyngrok --quiet
           ngrok authtoken 1nl3Mn1X5UJPxiTVpqqtNr0whc2_7fe21pBzrZ7kkeyBCLGko
-          streamlit run app.py &
+          streamlit run app.py --server.port 8504 &>/dev/null& &
           ngrok http 8504
