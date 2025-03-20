@@ -1,0 +1,11 @@
+streamlit
+pdfplumber
+transformers
+torch
+spacy
+pyngrok
+matplotlib
+wordcloud
+seaborn
+nltk
+fpdf
