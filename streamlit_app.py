@@ -143,10 +143,10 @@ if st.session_state["authentication_status"]:
         else:
             st.warning("Please upload a resume first to check for skills presence.")
 
-elif authentication_status is False:
-    st.error("Username/password is incorrect")
-elif authentication_status is None:
-    st.warning("Please enter your username and password")
+elif st.session_state["authentication_status"] is False:
+    st.error('Username/password is incorrect')
+elif st.session_state["authentication_status"] is None:
+    st.warning('Please enter your username and password')
 
 # # Registration
 # if authentication_status:
