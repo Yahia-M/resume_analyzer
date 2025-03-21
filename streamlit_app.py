@@ -4,11 +4,9 @@ from utils.skills_extractor import SkillsExtractor
 from utils.sentiment_analyzer import SentimentAnalyzer
 from utils.recommendations import RecommendationGenerator
 import os
-import streamlit_authenticator as stauth
-import yaml
-from yaml.loader import SafeLoader
+
 # Initialize components
-#os.system('python -m spacy download en_core_web_sm')
+os.system('python -m spacy download en_core_web_sm')
 
 pdf_extractor = PDFTextExtractor()
 skills_extractor = SkillsExtractor("models/skills_data.json")
