@@ -64,7 +64,7 @@
           "certifications": ["CISSP", "CEH", "CompTIA Security+", "CISM", "OSCP", "CCSP", "CISA", "GIAC"]
       },
       "HR Manager": {
-          "tools": ["Workday", "SAP SuccessFactors", "BambooHR", "ADP Workforce Now", "Zoho People", "Namely"],
+          "tools": ["Workday", "SAP SuccessFactors", "BambooHR", "ADP Workforce Now", "Zoho People", "Namely", "Word", "Excel", "PowerPoint", "Google Workspace","OneNote"],
           "concepts": ["Recruitment", "Employee Onboarding", "Performance Management", "Compensation Planning", "Succession Planning"],
           "soft_skills": ["Communication", "Conflict Resolution", "Leadership", "Negotiation", "Emotional Intelligence"]
       },
