@@ -30,12 +30,12 @@ recommendation_generator = RecommendationGenerator("models/skills_data.json")
 # Fetch configuration from MongoDB
 mongo_uri = st.secrets["MONGO_URI"]  # Store the MongoDB URI in Streamlit Secrets
 db_name = "mongodbVSCodePlaygroundDB"
-collection_name = "credentials"
+collection_name = st.secrets["collection_name"]
 mongo_config = MongoConfig(mongo_uri, db_name, collection_name)
 config = mongo_config.fetch_config()
 
 authenticator = stauth.Authenticate(
-    config['credentials'],
+    config[st.secrets["collection_name"]],
     config['cookie']['name'],
     config['cookie']['key'],
     config['cookie']['expiry_days'],
