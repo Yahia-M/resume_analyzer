@@ -1,6 +1,6 @@
-skills_data = {
+{
   "categories": {
-      # Existing Categories (expanded)
+
       "Software Developer": {
           "languages": ["Python", "Java", "JavaScript", "C++", "C#", "Ruby", "PHP", "TypeScript", "Go", "Rust"],
           "frameworks": ["Spring Boot", "Django", "Flask", "React", "Angular", "Vue.js", "Node.js", "Express.js", "ASP.NET", "FastAPI", "Laravel"],
@@ -48,7 +48,7 @@ skills_data = {
           "concepts": ["Sprint Planning", "Backlog Grooming", "Stakeholder Management", "Team Facilitation", "Retrospectives"]
       },
 
-      # New Categories
+    
       "Cloud Engineer": {
           "cloud_platforms": ["AWS", "Azure", "Google Cloud Platform (GCP)", "Oracle Cloud", "IBM Cloud", "DigitalOcean", "Alibaba Cloud"],
           "tools": ["Terraform", "Ansible", "Kubernetes", "Docker", "Serverless Framework", "Pulumi", "AWS CDK", "OpenShift"],
