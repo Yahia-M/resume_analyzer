@@ -27,9 +27,13 @@ class SkillsExtractor:
         skills_found = []
         for category, skill_groups in self.skills_data["categories"].items():
             for skill_group in skill_groups.values():
-                skills_found.extend([skill for skill in skill_group if skill.lower() in text.lower()])
+                for skill in skill_group:
+                    # Use regex with word boundaries to match full words only
+                    if re.search(rf"\b{re.escape(skill)}\b", text, flags=re.IGNORECASE):
+                        skills_found.append(skill)
         return skills_found
-
+    
+    
     def rank_skills(self, skills):
         return Counter(skills).most_common()
 
