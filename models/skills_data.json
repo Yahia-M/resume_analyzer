@@ -1,50 +1,98 @@
-{
-    "categories": {
+skills_data = {
+  "categories": {
+      # Existing Categories (expanded)
       "Software Developer": {
-        "languages": ["Python", "Java", "JavaScript", "C++", "C#", "Ruby", "PHP"],
-        "frameworks": ["Spring Boot", "Django", "Flask", "React", "Angular", "Vue.js", "Node.js", "Express.js", "ASP.NET"],
-        "tools": ["Git", "Jenkins", "Docker", "Kubernetes", "Swagger", "Postman", "Jira", "Confluence"],
-        "databases": ["MySQL", "PostgreSQL", "MongoDB", "SQLite", "Redis", "Elasticsearch", "Cassandra"],
-        "methodologies": ["Agile", "Scrum", "Kanban", "Test-Driven Development (TDD)"]
+          "languages": ["Python", "Java", "JavaScript", "C++", "C#", "Ruby", "PHP", "TypeScript", "Go", "Rust"],
+          "frameworks": ["Spring Boot", "Django", "Flask", "React", "Angular", "Vue.js", "Node.js", "Express.js", "ASP.NET", "FastAPI", "Laravel"],
+          "tools": ["Git", "Jenkins", "Docker", "Kubernetes", "Swagger", "Postman", "Jira", "Confluence", "VS Code", "IntelliJ IDEA", "PyCharm"],
+          "databases": ["MySQL", "PostgreSQL", "MongoDB", "SQLite", "Redis", "Elasticsearch", "Cassandra", "Oracle Database", "SQL Server", "Firebase"],
+          "methodologies": ["Agile", "Scrum", "Kanban", "Test-Driven Development (TDD)", "Behavior-Driven Development (BDD)"]
       },
       "DevOps Engineer": {
-        "languages": ["Python", "Bash", "Ruby"],
-        "tools": ["Jenkins", "Docker", "Kubernetes", "Terraform", "Ansible", "Chef", "Puppet", "Prometheus", "Grafana", "ELK Stack"],
-        "cloud_platforms": ["AWS", "Azure", "Google Cloud Platform (GCP)", "Oracle Cloud"],
-        "ci_cd": ["GitHub Actions", "GitLab CI/CD", "CircleCI", "Travis CI", "Bitbucket Pipelines"],
-        "infrastructure": ["Infrastructure as Code (IaC)", "Serverless Architecture", "Microservices", "Container Orchestration"]
+          "languages": ["Python", "Bash", "Ruby", "Go", "Shell Scripting"],
+          "tools": ["Jenkins", "Docker", "Kubernetes", "Terraform", "Ansible", "Chef", "Puppet", "Prometheus", "Grafana", "ELK Stack", "Nagios", "Zabbix"],
+          "cloud_platforms": ["AWS", "Azure", "Google Cloud Platform (GCP)", "Oracle Cloud", "IBM Cloud", "DigitalOcean"],
+          "ci_cd": ["GitHub Actions", "GitLab CI/CD", "CircleCI", "Travis CI", "Bitbucket Pipelines", "ArgoCD", "Tekton"],
+          "infrastructure": ["Infrastructure as Code (IaC)", "Serverless Architecture", "Microservices", "Container Orchestration", "Hybrid Cloud"]
       },
       "Snowflake Engineer": {
-        "tools": ["Snowflake", "dbt", "SQL", "ETL Tools", "Data Warehousing"],
-        "concepts": ["Data Modeling", "Data Transformation", "Data Pipeline Optimization"]
+          "tools": ["Snowflake", "dbt", "SQL", "ETL Tools", "Data Warehousing", "Apache Airflow", "Prefect"],
+          "concepts": ["Data Modeling", "Data Transformation", "Data Pipeline Optimization", "Data Governance", "Data Lineage"]
       },
       "Data Engineer": {
-        "languages": ["Python", "SQL", "Scala", "Java"],
-        "tools": ["Apache Kafka", "Apache Spark", "Airflow", "Flink", "NiFi", "Talend", "Informatica"],
-        "databases": ["PostgreSQL", "MySQL", "MongoDB", "Cassandra", "HBase", "DynamoDB", "Snowflake"],
-        "pipelines": ["ETL (Extract, Transform, Load)", "ELT (Extract, Load, Transform)", "Data Warehousing"],
-        "cloud_services": ["AWS Glue", "Azure Data Factory", "Google BigQuery", "Snowflake", "Redshift"]
+          "languages": ["Python", "SQL", "Scala", "Java", "R", "Julia"],
+          "tools": ["Apache Kafka", "Apache Spark", "Airflow", "Flink", "NiFi", "Talend", "Informatica", "Great Expectations", "dbt"],
+          "databases": ["PostgreSQL", "MySQL", "MongoDB", "Cassandra", "HBase", "DynamoDB", "Snowflake", "Redshift", "BigQuery", "Delta Lake"],
+          "pipelines": ["ETL (Extract, Transform, Load)", "ELT (Extract, Load, Transform)", "Data Warehousing", "Data Streaming"],
+          "cloud_services": ["AWS Glue", "Azure Data Factory", "Google BigQuery", "Snowflake", "Redshift", "Databricks", "AWS Lambda"]
       },
       "Big Data Engineer": {
-        "tools": ["Apache Hadoop", "Apache Hive", "Apache Pig", "Apache Flink", "Apache Kafka", "Apache Spark"],
-        "languages": ["Python", "Java", "Scala"],
-        "databases": ["HDFS", "Cassandra", "HBase", "MongoDB", "Redshift"],
-        "concepts": ["Batch Processing", "Stream Processing", "Data Lake", "Data Pipeline Optimization"]
+          "tools": ["Apache Hadoop", "Apache Hive", "Apache Pig", "Apache Flink", "Apache Kafka", "Apache Spark", "Presto", "Druid"],
+          "languages": ["Python", "Java", "Scala", "R", "SQL"],
+          "databases": ["HDFS", "Cassandra", "HBase", "MongoDB", "Redshift", "ClickHouse", "Neo4j"],
+          "concepts": ["Batch Processing", "Stream Processing", "Data Lake", "Data Pipeline Optimization", "Real-Time Analytics"]
       },
       "Data Visualization Specialist": {
-        "tools": ["Tableau", "Power BI", "Matplotlib", "Seaborn", "Plotly", "D3.js"],
-        "libraries": ["Pandas", "NumPy", "Matplotlib", "Seaborn", "Plotly"],
-        "concepts": ["Data Storytelling", "Dashboard Design", "Interactive Visualizations"]
+          "tools": ["Tableau", "Power BI", "Matplotlib", "Seaborn", "Plotly", "D3.js", "Looker", "QlikView", "Sisense"],
+          "libraries": ["Pandas", "NumPy", "Matplotlib", "Seaborn", "Plotly", "Altair", "Bokeh"],
+          "concepts": ["Data Storytelling", "Dashboard Design", "Interactive Visualizations", "Geospatial Analysis", "Time Series Analysis"]
       },
       "Java Tech Lead": {
-        "languages": ["Java", "Spring Boot", "Hibernate", "JUnit"],
-        "tools": ["Maven", "Gradle", "Jenkins", "SonarQube"],
-        "methodologies": ["Agile", "Scrum", "Code Review", "Technical Leadership"]
+          "languages": ["Java", "Spring Boot", "Hibernate", "JUnit", "Mockito", "JUnit 5", "TestNG"],
+          "tools": ["Maven", "Gradle", "Jenkins", "SonarQube", "JaCoCo", "JProfiler", "VisualVM"],
+          "methodologies": ["Agile", "Scrum", "Code Review", "Technical Leadership", "Pair Programming"]
       },
       "Scrum Master": {
-        "tools": ["Jira", "Trello", "Confluence", "Slack"],
-        "methodologies": ["Agile", "Scrum", "Kanban", "Lean Startup"],
-        "concepts": ["Sprint Planning", "Backlog Grooming", "Stakeholder Management", "Team Facilitation"]
+          "tools": ["Jira", "Trello", "Confluence", "Slack", "Microsoft Teams", "Asana"],
+          "methodologies": ["Agile", "Scrum", "Kanban", "Lean Startup", "SAFe (Scaled Agile Framework)"],
+          "concepts": ["Sprint Planning", "Backlog Grooming", "Stakeholder Management", "Team Facilitation", "Retrospectives"]
+      },
+
+      # New Categories
+      "Cloud Engineer": {
+          "cloud_platforms": ["AWS", "Azure", "Google Cloud Platform (GCP)", "Oracle Cloud", "IBM Cloud", "DigitalOcean", "Alibaba Cloud"],
+          "tools": ["Terraform", "Ansible", "Kubernetes", "Docker", "Serverless Framework", "Pulumi", "AWS CDK", "OpenShift"],
+          "concepts": ["Cloud Migration", "Cost Optimization", "Security Best Practices", "High Availability", "Disaster Recovery"]
+      },
+      "IT Support Specialist": {
+          "tools": ["Active Directory", "Remote Desktop", "Ticketing Systems", "Network Monitoring Tools", "Wireshark", "SolarWinds", "Nagios"],
+          "concepts": ["Troubleshooting", "Network Configuration", "User Support", "System Maintenance", "ITIL Framework"]
+      },
+      "Cybersecurity Specialist": {
+          "tools": ["Wireshark", "Nmap", "Metasploit", "Burp Suite", "Splunk", "SIEM Tools", "Qualys", "Fortinet", "Palo Alto Networks"],
+          "concepts": ["Threat Detection", "Vulnerability Assessment", "Incident Response", "Penetration Testing", "Zero Trust Architecture"],
+          "certifications": ["CISSP", "CEH", "CompTIA Security+", "CISM", "OSCP", "CCSP", "CISA", "GIAC"]
+      },
+      "HR Manager": {
+          "tools": ["Workday", "SAP SuccessFactors", "BambooHR", "ADP Workforce Now", "Zoho People", "Namely"],
+          "concepts": ["Recruitment", "Employee Onboarding", "Performance Management", "Compensation Planning", "Succession Planning"],
+          "soft_skills": ["Communication", "Conflict Resolution", "Leadership", "Negotiation", "Emotional Intelligence"]
+      },
+      "Data Analyst": {
+          "tools": ["Excel", "Tableau", "Power BI", "Google Data Studio", "R", "Python", "SAS", "SPSS"],
+          "libraries": ["Pandas", "NumPy", "Matplotlib", "Seaborn", "Plotly", "SciPy", "Statsmodels"],
+          "concepts": ["Data Cleaning", "Data Exploration", "Statistical Analysis", "Data Visualization", "A/B Testing"]
+      },
+      "Product Manager": {
+          "tools": ["Jira", "Trello", "Confluence", "Asana", "Monday.com", "ClickUp", "Productboard"],
+          "methodologies": ["Agile", "Scrum", "Kanban", "Lean Product Development", "Design Thinking"],
+          "concepts": ["Roadmapping", "Feature Prioritization", "User Research", "Stakeholder Management", "Market Analysis"]
+      },
+      "UX/UI Designer": {
+          "tools": ["Figma", "Sketch", "Adobe XD", "InVision", "Axure RP", "Zeplin", "Marvel"],
+          "concepts": ["Wireframing", "Prototyping", "User Research", "Usability Testing", "Interaction Design"],
+          "soft_skills": ["Creativity", "Empathy", "Collaboration", "Problem Solving", "Attention to Detail"]
+      },
+      "AI/ML Engineer": {
+          "languages": ["Python", "R", "Julia", "SQL"],
+          "tools": ["TensorFlow", "PyTorch", "Scikit-learn", "Keras", "XGBoost", "LightGBM", "Hugging Face"],
+          "libraries": ["NumPy", "Pandas", "Matplotlib", "Seaborn", "NLTK", "Spacy", "OpenCV"],
+          "concepts": ["Supervised Learning", "Unsupervised Learning", "Deep Learning", "Natural Language Processing", "Computer Vision"]
+      },
+      "Blockchain Developer": {
+          "languages": ["Solidity", "Rust", "Go", "JavaScript", "Python"],
+          "tools": ["Truffle", "Hardhat", "Ganache", "Remix", "Web3.js", "Ethers.js", "Brownie"],
+          "concepts": ["Smart Contracts", "Decentralized Applications (dApps)", "Cryptocurrency", "Consensus Algorithms", "Token Standards"]
       }
-    }
   }
+}
