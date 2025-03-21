@@ -14,7 +14,7 @@ sentiment_analyzer = SentimentAnalyzer()
 recommendation_generator = RecommendationGenerator("models/skills_data.json")
 
 # Streamlit app
-st.title("Resume Analyzer Pro")
+st.title("💬 Resume Analyzer Pro")
 
 # Sidebar: Specify a category
 st.sidebar.header("Category Match Analysis")
