@@ -21,7 +21,7 @@
       },
       "Data Engineer": {
           "languages": ["Python", "SQL", "Scala", "Java",  "Julia"],
-          "tools": ["Apache Kafka", "Apache Spark", "Airflow", "Flink", "NiFi", "Talend", "Informatica", "Great Expectations", "dbt"],
+          "tools": ["Apache Kafka", "Apache Spark", "Airflow", "Flink",  "Talend", "Informatica", "Great Expectations", "dbt"],
           "databases": ["PostgreSQL", "MySQL", "MongoDB", "Cassandra", "HBase", "DynamoDB", "Snowflake", "Redshift", "BigQuery", "Delta Lake"],
           "pipelines": ["ETL (Extract, Transform, Load)", "ELT (Extract, Load, Transform)", "Data Warehousing", "Data Streaming"],
           "cloud_services": ["AWS Glue", "Azure Data Factory", "Google BigQuery", "Snowflake", "Redshift", "Databricks", "AWS Lambda"]
