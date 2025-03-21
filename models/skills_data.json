@@ -2,14 +2,14 @@
   "categories": {
 
       "Software Developer": {
-          "languages": ["Python", "Java", "JavaScript", "C++", "C#", "Ruby", "PHP", "TypeScript", "Go", "Rust"],
+          "languages": ["Python", "Java", "JavaScript", "C++", "C#", "Ruby", "PHP", "TypeScript",  "Rust"],
           "frameworks": ["Spring Boot", "Django", "Flask", "React", "Angular", "Vue.js", "Node.js", "Express.js", "ASP.NET", "FastAPI", "Laravel"],
           "tools": ["Git", "Jenkins", "Docker", "Kubernetes", "Swagger", "Postman", "Jira", "Confluence", "VS Code", "IntelliJ IDEA", "PyCharm"],
           "databases": ["MySQL", "PostgreSQL", "MongoDB", "SQLite", "Redis", "Elasticsearch", "Cassandra", "Oracle Database", "SQL Server", "Firebase"],
           "methodologies": ["Agile", "Scrum", "Kanban", "Test-Driven Development (TDD)", "Behavior-Driven Development (BDD)"]
       },
       "DevOps Engineer": {
-          "languages": ["Python", "Bash", "Ruby", "Go", "Shell Scripting"],
+          "languages": ["Python", "Bash", "Ruby",  "Shell Scripting"],
           "tools": ["Jenkins", "Docker", "Kubernetes", "Terraform", "Ansible", "Chef", "Puppet", "Prometheus", "Grafana", "ELK Stack", "Nagios", "Zabbix"],
           "cloud_platforms": ["AWS", "Azure", "Google Cloud Platform (GCP)", "Oracle Cloud", "IBM Cloud", "DigitalOcean"],
           "ci_cd": ["GitHub Actions", "GitLab CI/CD", "CircleCI", "Travis CI", "Bitbucket Pipelines", "ArgoCD", "Tekton"],
@@ -20,7 +20,7 @@
           "concepts": ["Data Modeling", "Data Transformation", "Data Pipeline Optimization", "Data Governance", "Data Lineage"]
       },
       "Data Engineer": {
-          "languages": ["Python", "SQL", "Scala", "Java", "R", "Julia"],
+          "languages": ["Python", "SQL", "Scala", "Java",  "Julia"],
           "tools": ["Apache Kafka", "Apache Spark", "Airflow", "Flink", "NiFi", "Talend", "Informatica", "Great Expectations", "dbt"],
           "databases": ["PostgreSQL", "MySQL", "MongoDB", "Cassandra", "HBase", "DynamoDB", "Snowflake", "Redshift", "BigQuery", "Delta Lake"],
           "pipelines": ["ETL (Extract, Transform, Load)", "ELT (Extract, Load, Transform)", "Data Warehousing", "Data Streaming"],
@@ -28,7 +28,7 @@
       },
       "Big Data Engineer": {
           "tools": ["Apache Hadoop", "Apache Hive", "Apache Pig", "Apache Flink", "Apache Kafka", "Apache Spark", "Presto", "Druid"],
-          "languages": ["Python", "Java", "Scala", "R", "SQL"],
+          "languages": ["Python", "Java", "Scala",  "SQL"],
           "databases": ["HDFS", "Cassandra", "HBase", "MongoDB", "Redshift", "ClickHouse", "Neo4j"],
           "concepts": ["Batch Processing", "Stream Processing", "Data Lake", "Data Pipeline Optimization", "Real-Time Analytics"]
       },
@@ -69,7 +69,7 @@
           "soft_skills": ["Communication", "Conflict Resolution", "Leadership", "Negotiation", "Emotional Intelligence"]
       },
       "Data Analyst": {
-          "tools": ["Excel", "Tableau", "Power BI", "Google Data Studio", "R", "Python", "SAS", "SPSS"],
+          "tools": ["Excel", "Tableau", "Power BI", "Google Data Studio",  "Python", "SAS", "SPSS"],
           "libraries": ["Pandas", "NumPy", "Matplotlib", "Seaborn", "Plotly", "SciPy", "Statsmodels"],
           "concepts": ["Data Cleaning", "Data Exploration", "Statistical Analysis", "Data Visualization", "A/B Testing"]
       },
@@ -84,13 +84,13 @@
           "soft_skills": ["Creativity", "Empathy", "Collaboration", "Problem Solving", "Attention to Detail"]
       },
       "AI/ML Engineer": {
-          "languages": ["Python", "R", "Julia", "SQL"],
+          "languages": ["Python",  "Julia", "SQL"],
           "tools": ["TensorFlow", "PyTorch", "Scikit-learn", "Keras", "XGBoost", "LightGBM", "Hugging Face"],
           "libraries": ["NumPy", "Pandas", "Matplotlib", "Seaborn", "NLTK", "Spacy", "OpenCV"],
           "concepts": ["Supervised Learning", "Unsupervised Learning", "Deep Learning", "Natural Language Processing", "Computer Vision"]
       },
       "Blockchain Developer": {
-          "languages": ["Solidity", "Rust", "Go", "JavaScript", "Python"],
+          "languages": ["Solidity", "Rust",  "JavaScript", "Python"],
           "tools": ["Truffle", "Hardhat", "Ganache", "Remix", "Web3.js", "Ethers.js", "Brownie"],
           "concepts": ["Smart Contracts", "Decentralized Applications (dApps)", "Cryptocurrency", "Consensus Algorithms", "Token Standards"]
       }
