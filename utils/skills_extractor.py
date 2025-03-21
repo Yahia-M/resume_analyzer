@@ -2,12 +2,11 @@ import re
 from collections import Counter
 import spacy
 import json
-import os
+
 
 
 class SkillsExtractor:
     def __init__(self, skills_data_path):
-        os.system('python -m spacy download en_core_web_sm')
         self.skills_data = self.load_skills_data(skills_data_path)
         self.nlp = spacy.load("en_core_web_sm")
 
