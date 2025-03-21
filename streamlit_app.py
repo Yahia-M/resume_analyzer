@@ -6,7 +6,7 @@ from utils.recommendations import RecommendationGenerator
 import os
 
 # Initialize components
-os.system('python -m spacy download en_core_web_sm')
+#os.system('python -m spacy download en_core_web_sm')
 
 pdf_extractor = PDFTextExtractor()
 skills_extractor = SkillsExtractor("models/skills_data.json")
