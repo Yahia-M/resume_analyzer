@@ -2,19 +2,15 @@ import re
 from collections import Counter
 import spacy
 import json
+import os
+
 
 class SkillsExtractor:
     def __init__(self, skills_data_path):
+        os.system('python -m spacy download en_core_web_sm')
         self.skills_data = self.load_skills_data(skills_data_path)
-        self.nlp = self.load_spacy_model()
+        self.nlp = spacy.load("en_core_web_sm")
 
-    @staticmethod
-    def load_spacy_model():
-        try:
-            # Load the spaCy model from the default location
-            return spacy.load("en_core_web_sm")
-        except OSError:
-            raise RuntimeError("The spaCy model 'en_core_web_sm' is not installed. Please ensure it is available in the Python environment.")
     @staticmethod
     def load_skills_data(path):
         with open(path, "r") as file:

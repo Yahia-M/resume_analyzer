@@ -19,17 +19,12 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.12.9'
+          python-version: '3.11'
 
       - name: Install dependencies
         run: |
           pip install --upgrade pip
           pip install -r requirements.txt 
-
-          - name: Unzip and install spaCy model
-          run: |
-            mkdir -p /home/runner/.local/lib/python3.9/site-packages/en_core_web_sm
-            unzip models/en_core_web_sm.zip -d /home/runner/.local/lib/python3.9/site-packages/en_core_web_sm
 
       - name: Run tests
         run: |
@@ -46,6 +41,6 @@ jobs:
 
       - name: Deploy 
         run: |
-          echo "Deploying the app streamlit..."
+          echo "Deploying the app ..."
           streamlit run streamlit_app.py &
           
