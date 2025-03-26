@@ -43,17 +43,29 @@ authenticator = stauth.Authenticate(
 )
 
 # Display the logo or banner image at the very top of the app
-st.image("utils/img/55Brains.png", caption="Resume Analyzer Pro", width=300)  # Adjust width as needed
+#st.image("utils/img/55Brains.png", caption="Resume Analyzer Pro", width=300)  # Adjust width as needed
 
 # Add spacing between the image and the login section
-st.markdown("<br>", unsafe_allow_html=True)
+#st.markdown("<br>", unsafe_allow_html=True)
 
-spacer_left, form, spacer_right = st.columns([1, 0.8, 1])
-with form:
+#spacer_left, form, spacer_right = st.columns([1, 0.8, 1])
+#with form:
+#    authenticator.login(location='main')
+# Create a centered layout for the image and login form
+col1, col2, col3 = st.columns([1, 2, 1])  
+with col2:  # Use the middle column for the image and login form
+    # Display the logo or banner image, centered
+    st.image("utils/img/55Brains.png", width=300)  # Adjust width as needed
+
+    # Add spacing between the image and the login section
+    st.markdown("<br>", unsafe_allow_html=True)
+
+    # Login form
+    st.subheader("Login")
     authenticator.login(location='main')
-
+    
 if st.session_state["authentication_status"]:
-    with form:
+    with col2:  # Use the middle column for the image and login form
         authenticator.logout()
         st.write(f'Welcome *{st.session_state["name"]}*')
         
