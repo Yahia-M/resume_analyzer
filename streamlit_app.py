@@ -50,6 +50,9 @@ if st.session_state["authentication_status"]:
     with form:
         authenticator.logout()
         st.write(f'Welcome *{st.session_state["name"]}*')
+
+    # Display the logo or banner image at the top of the app
+    st.image("./utils/img/55Brains.png", caption="Resume Analyzer Pro", use_column_width=True) 
     # st.success(f"Welcome {name}!")
     # st.session_state["authentication_status"] = True
     # Streamlit app
