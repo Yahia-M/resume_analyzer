@@ -42,40 +42,22 @@ authenticator = stauth.Authenticate(
 
 )
 
-# Display the logo or banner image at the very top of the app
-#st.image("utils/img/55Brains.png", caption="Resume Analyzer Pro", width=300)  # Adjust width as needed
-
-# Add spacing between the image and the login section
-#st.markdown("<br>", unsafe_allow_html=True)
-
 #spacer_left, form, spacer_right = st.columns([1, 0.8, 1])
-#with form:
-#    authenticator.login(location='main')
-# Create a centered layout for the image and login form
-col1, col2, col3 = st.columns([1, 2, 1])  
+col1, col2, col3 = st.columns([1, 2, 1]) 
+
 with col2:  # Use the middle column for the image and login form
     # Display the logo or banner image, centered
-    st.image("utils/img/55Brains.png", width=300)  # Adjust width as needed
+    st.image("utils/img/55Brains.png", caption="Resume Analyzer Pro", width=300)  # Adjust width as needed
 
     # Add spacing between the image and the login section
     st.markdown("<br>", unsafe_allow_html=True)
+#with form:
+    authenticator.login(location='main')
 
-    # Login form inside a centered Streamlit form
-    with st.form("login_form"):
-        st.subheader("Login")
-        username = st.text_input("Username")
-        password = st.text_input("Password", type="password")
-        submitted = st.form_submit_button("Login")
-
-        if submitted:
-            # Authenticate the user
-            authenticator.login(username=username, password=password)
-    
 if st.session_state["authentication_status"]:
-    with col2:  # Use the middle column for the image and login form
+    with col2:
         authenticator.logout()
         st.write(f'Welcome *{st.session_state["name"]}*')
-        
     # st.success(f"Welcome {name}!")
     # st.session_state["authentication_status"] = True
     # Streamlit app
