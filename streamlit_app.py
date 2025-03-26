@@ -42,6 +42,12 @@ authenticator = stauth.Authenticate(
 
 )
 
+# Display the logo or banner image at the very top of the app
+st.image("utils/img/55Brains.png", caption="Resume Analyzer Pro", width=300)  # Adjust width as needed
+
+# Add spacing between the image and the login section
+st.markdown("<br>", unsafe_allow_html=True)
+
 spacer_left, form, spacer_right = st.columns([1, 0.8, 1])
 with form:
     authenticator.login(location='main')
@@ -50,9 +56,7 @@ if st.session_state["authentication_status"]:
     with form:
         authenticator.logout()
         st.write(f'Welcome *{st.session_state["name"]}*')
-
-    # Display the logo or banner image at the top of the app
-    st.image("utils/img/55Brains.png", caption="Resume Analyzer Pro", use_column_width=True) 
+        
     # st.success(f"Welcome {name}!")
     # st.session_state["authentication_status"] = True
     # Streamlit app
