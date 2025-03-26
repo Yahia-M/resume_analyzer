@@ -60,9 +60,16 @@ with col2:  # Use the middle column for the image and login form
     # Add spacing between the image and the login section
     st.markdown("<br>", unsafe_allow_html=True)
 
-    # Login form
-    st.subheader("Login")
-    authenticator.login(location='main')
+    # Login form inside a centered Streamlit form
+    with st.form("login_form"):
+        st.subheader("Login")
+        username = st.text_input("Username")
+        password = st.text_input("Password", type="password")
+        submitted = st.form_submit_button("Login")
+
+        if submitted:
+            # Authenticate the user
+            authenticator.login(username=username, password=password)
     
 if st.session_state["authentication_status"]:
     with col2:  # Use the middle column for the image and login form
