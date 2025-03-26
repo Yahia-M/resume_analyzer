@@ -47,7 +47,7 @@ col1, col2, col3 = st.columns([1, 2, 1])
 
 with col2:  # Use the middle column for the image and login form
     # Display the logo or banner image, centered
-    st.image("utils/img/55Brains.png", caption="Resume Analyzer Pro", width=300)  # Adjust width as needed
+    st.image("utils/img/55Brains.png", width=300)  # Adjust width as needed
 
     # Add spacing between the image and the login section
     st.markdown("<br>", unsafe_allow_html=True)
